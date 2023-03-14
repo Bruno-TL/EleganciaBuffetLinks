@@ -1,58 +1,161 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <div class="imgPerfil">
+      <div class="imgPerfil__modura">
+
+      </div>  
+    </div>
+    
+    <a href="https://www.instagram.com/buffetelegancia/" target="_blank" class="inst__link">@BuffetElegancia</a>
+    
+    <div class="linha">
+
+    </div>
+
+    <div class="links">
+
+      <a class="links__unico" href="https://elegancia-buffet.vercel.app/" target="_blank">site</a>
+      <a class="links__unico" href="https://api.whatsapp.com/send?phone=558599344210&text=Ol%C3%A1,%20Obrigado%20por%20entrar%20em%20contanto%20com%20a%20gente%20do%20Eleg%C3%A2ncia%20Buffet,%20em%20instantes%20a%20nossa%20Gerente%20de%20Eventos%20ir%C3%A1%20falar%20com%20voc%C3%AA">whatsApp</a>
+
+
+    </div>
+
+    <div class="creator">
+      <a href="https://www.instagram.com/t.bruno__/" target="_blank" class="creator__link">Created by @t.bruno__</a>
+    </div>
   </div>
+  
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 100vh;
+  }
+  .imgPerfil {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .imgPerfil__modura {
+    height: 110px;
+    width: 130px;
+
+    background-image: url(../assets/Eb4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 50%;
+  }
+
+  /* Menção instagram */
+  
+  .inst__link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+  }
+
+  .inst__link:visited {
+    color: rgb(34, 34, 34);
+    font-weight: 600;
+  }
+
+  .linha {
+    margin-top: 10px;
+    border: 1px solid rgb(39, 39, 39);
+    width: 100%;
+  }
+  /* Dimnuir o tamanho da letra para o mobile */
+  /* Links  */
+
+  .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 35vh;
+  }
+
+  .links__unico {
+    box-sizing: content-box;
+    border: 1.5px solid rgb(39, 39, 39);
+    width: 70%;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: rgb(34, 34, 34);
+    transition-duration: 0.5s;
+  }
+
+  .links__unico:hover{
+    background-color: #000;
+    color: #fff;
+    border: 1.5px solid #fff;
+  }
+
+  .creator{
+    height: 10vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width:200px;
+  }
+
+  .creator__link {
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+  }
+
+  @media screen and (max-width:500px){
+    .container{
+    width: 100%;
+  }
+
+  .inst__link {
+    font-size: 1.5rem;
+  }
+
+    .linha {
+    margin: 20px 0;
+    border: 1px solid #000;
+    width: 100%;
+  }
+
+  .links{
+    width: 100%;
+    height: 35vh;
+  }
+
+  .links__unico {
+    box-sizing: content-box;
+    border: 2px solid rgb(39, 39, 39);
+    width: 90%;
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+
+
+
+  }
 </style>
